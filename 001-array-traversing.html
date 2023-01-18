@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <title>array-traversing</title>
+</head>
+<body>
+    <h1 style="text-align: center; color: rgb(225, 24, 191); font-weight: bold">Array Traversing</h1>
+    <div id="main-div" style="display: flex; justify-items: center; justify-content: center;">
+        <label for="el" style="margin-right:10px ;"> input index </label>
+        <input type="number" id="el">
+        <button onclick="getElement()">Get Element</button>
+    </div>
+
+    <script>
+        const array=[34,8,9,10,39,10,100,29,39,40,50,20];
+    //     let list = "";
+    //     for(let i=0;i<array.length;i++){
+    //        list += `Array Item ${i} Value is ${array[i]} <br> <br>`
+    //     }
+    //    document.getElementById("main-div").innerHTML=list;
+
+    const getElement=()=>{
+     const el = document.getElementById("el").value ;
+        if(el<array.length){
+            alert(array[el])
+        }else{
+            alert(`plz valid input under the number of  ${array.length}`)
+        }
+
+
+    
+    }
+     
+         </script>
+</body>
+</html>
