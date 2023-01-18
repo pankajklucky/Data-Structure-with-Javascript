@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array insert</title>
+</head>
+<body>
+
+    <input type="number" id="index" placeholder="plz enter index">
+    <input type="number" id="element" placeholder="plz enter element">
+
+    <button onclick="insert()">Insert</button>
+
+    
+    <script>
+        // let data=[50,20,49,10,34,55,87,98,100];
+        // let newElement=24;
+        // let position=2;
+        // for(let i=data.length-1;i>=0;i--){
+        //     if(i>=position){
+        //         data[i+1]=data[i];
+        //         if(i==position){
+        //             data[i]=newElement;
+        //         }
+
+
+        //     }
+
+        // }
+        const insert=()=>{
+    let position=document.getElementById('index').value ;
+    let newElement= document.getElementById("element").value;
+    let data=[1,2,3,4,5];
+
+      for(let i=data.length-1;i>=0;i--){
+      if(position<=data.length){
+        if(i>=position){
+            data[i+1]=data[i];
+            if(i==position){
+                data[i]=parseInt(newElement) ;
+                alert(`Inser Element ${newElement} at ${position} postion`)
+            }
+        }
+      }else{
+        alert(`pls insert value under in  ${data.length}`)
+        break;
+      }
+
+        
+      }
+console.log(data)
+        }
+        
+    </script>
+</body>
+</html>
